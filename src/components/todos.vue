@@ -133,7 +133,7 @@ import axios from 'axios'
     axios
       .get('http://localhost:3000/todolist')
       .then(response => {
-        this.info = response.data.bpi
+        this.info = response.data.id
       })
       .catch(error => {
         console.log(error)
@@ -141,10 +141,11 @@ import axios from 'axios'
       })
       .finally(() => this.loading = false)
     },
-    postPost() {
-    axios.post(`http://localhost:3000/todolist`)
+    created() {
+    const data = { title: 'happy'}
+    axios.post('http://localhost:3000/todolist', data)
     .then(response => {
-        this.info = response.data.bpi
+        this.info = response.data.id
       })
     .catch(e => {
       this.errors.push(e)
