@@ -128,7 +128,7 @@ import axios from 'axios'
         this.todos = this.todos.filter(todo => todo.completed != true)
       }
     },
-    mounted () {
+    mounted (){
     axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
       .then(response => {
