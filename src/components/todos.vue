@@ -60,7 +60,6 @@ import axios from 'axios'
             'editing': false,
           },
         ]
-
       }
     },
     computed: {
