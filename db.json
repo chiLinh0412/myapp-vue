@@ -1,0 +1,16 @@
+{
+    "todolist": [
+    {
+        "id": 1,
+        "title": "Finish vuejs",
+        "completed": false,
+        "editing": false
+    },
+    {
+        "id": 2,
+        "title": "Progress spring",
+        "completed": false,
+        "editing": false
+    }
+    ]
+}

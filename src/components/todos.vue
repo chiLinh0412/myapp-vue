@@ -127,9 +127,11 @@ import axios from 'axios'
         this.todos = this.todos.filter(todo => todo.completed != true)
       }
     },
+
+    // lance db.json by command "json-server db.json"
     mounted (){
     axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .get('http://localhost:3000/todolist')
       .then(response => {
         this.info = response.data.bpi
       })
@@ -138,7 +140,16 @@ import axios from 'axios'
         this.errored = true
       })
       .finally(() => this.loading = false)
-    }
+    },
+    postPost() {
+    axios.post(`http://localhost:3000/todolist`)
+    .then(response => {
+        this.info = response.data.bpi
+      })
+    .catch(e => {
+      this.errors.push(e)
+    })
+  }
   }
 
 
